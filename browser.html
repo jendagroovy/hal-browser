@@ -52,6 +52,7 @@
           <th>rel</th>
           <th>title</th>
           <th>name / index</th>
+          <th>profile</th>
           <th>docs</th>
           <th>GET</th>
           <th>NON-GET</th>
@@ -65,6 +66,7 @@
               <td><strong><%= HAL.truncateIfUrl(rel) %></strong></td>
               <td><%= link.title || '' %></td>
               <td><%= link.name ? 'name: ' + link.name : 'index: ' + i %></a></td>
+              <td><%= link.profile %></td>
               <td>
               <% if (HAL.isUrl(rel)) { %>
                 <a class="dox" href="<%= HAL.buildUrl(rel) %>"><i class="icon-book"></i></a>
@@ -87,6 +89,7 @@
             <td><strong><%= HAL.truncateIfUrl(rel) %></strong></td>
             <td><%= obj.title || '' %></td>
             <td><%= obj.name || '' %></td>
+            <td><%= obj.profile || ''%></td>
             <td>
             <% if (HAL.isUrl(rel)) { %>
               <a class="dox" href="<%= HAL.buildUrl(rel) %>"><i class="icon-book"></i></a>
